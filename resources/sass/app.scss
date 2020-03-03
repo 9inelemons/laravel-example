@@ -1,0 +1,88 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css');
+
+@import url('https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css');
+
+@import url('https://cdn.datatables.net/rowreorder/1.2.6/css/rowReorder.dataTables.min.css');
+
+
+button#add-to-cart-button {
+    outline: none;
+    position: relative;
+    border: 0;
+    background: #fff;
+    img {
+        width:20px;
+    }
+
+    .success-popup {
+        visibility:hidden;
+    }
+
+    //popup container
+    .quantity-popup {
+        visibility: hidden;
+        width: 180px;
+        height: 25px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 3px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 140%;
+        left: 50%;
+        margin-left: -201px;
+
+        //popup arrow
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+    }
+    .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 3s;
+        animation: fadeIn 3s;
+    }
+    @-webkit-keyframes fadeIn {
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity: 0;}
+
+    }
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+}
+
+input#quantityInput[type=number]::-webkit-inner-spin-button,
+input#quantityInput[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.order-info {
+    text-align: center;
+}
+
+
+
+
